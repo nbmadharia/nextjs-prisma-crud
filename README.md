@@ -1,3 +1,6 @@
+Windows Setup -> https://docs.google.com/document/d/1UeEt78puKG3qTKmFAgIfnIekBwU4zTm3JgmIlYGW8XM/edit?usp=sharing
+
+
 # Next.js Prisma CRUD Application
 
 This project is a Next.js application that demonstrates how to implement a simple CRUD (Create, Read, Update, Delete) functionality using Prisma for database integration. The application allows users to manage posts, including creating new posts, viewing a list of posts, editing existing posts, and deleting posts.
