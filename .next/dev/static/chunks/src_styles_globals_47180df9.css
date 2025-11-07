@@ -113,21 +113,58 @@ input:focus, textarea:focus {
   box-shadow: 0 0 0 3px #2563eb14;
 }
 
-button {
+button, .button {
   cursor: pointer;
-  color: #fff;
-  background: var(--accent);
-  border: 0;
+  border: none;
   border-radius: 6px;
-  padding: .55rem .9rem;
+  margin-right: .5rem;
+  padding: .6rem 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
+  transition: background .2s, color .2s, box-shadow .2s;
   display: inline-block;
 }
 
-button.secondary {
-  color: var(--accent);
-  background: none;
+button.view, .button.view {
+  color: #3730a3;
+  background: #e0e7ff;
   border: 1px solid #c7d2fe;
+}
+
+button.edit, .button.edit {
+  color: #b45309;
+  background: #fef9c3;
+  border: 1px solid #fde68a;
+}
+
+button.delete, .button.delete {
+  color: #dc2626;
+  background: #fee2e2;
+  border: 1px solid #fecaca;
+}
+
+button.view:hover, .button.view:hover {
+  color: #312e81;
+  background: #c7d2fe;
+}
+
+button.edit:hover, .button.edit:hover {
+  color: #92400e;
+  background: #fde68a;
+}
+
+button.delete:hover, .button.delete:hover {
+  color: #b91c1c;
+  background: #fecaca;
+}
+
+input[type="text"] {
+  background: #f7fafc;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  margin-bottom: .5rem;
+  padding: .8rem 1rem;
+  font-size: 1.2rem;
 }
 
 .post-list {

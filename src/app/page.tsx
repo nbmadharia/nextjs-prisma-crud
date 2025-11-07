@@ -3,7 +3,7 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <main>
-      <h1>Welcome to the Next.js Prisma CRUD App</h1>
+      <h1>Welcome to the CICD ProSystems!!</h1>
       <nav>
         <ul>
           <li>

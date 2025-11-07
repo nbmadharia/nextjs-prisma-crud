@@ -9,57 +9,97 @@ __turbopack_context__.s([
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 "use client";
 ;
-function PostList(props) {
-    const { posts, onDelete } = props;
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                children: "Post List"
-            }, void 0, false, {
-                fileName: "[project]/src/components/PostList.tsx",
-                lineNumber: 20,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                children: posts.map((post)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+function PostList({ posts, onDelete }) {
+    const handleDelete = async (id)=>{
+        if (onDelete) return onDelete(id);
+        if (!confirm('Delete this post?')) return;
+        const res = await fetch(`/api/posts/${id}`, {
+            method: 'DELETE'
+        });
+        if (!res.ok) {
+            console.error('Failed to delete post');
+            return;
+        }
+        window.location.reload();
+    };
+    const handleView = (id)=>{
+    // Implement view logic here, e.g., navigate to the post detail page
+    };
+    const handleEdit = (id)=>{
+    // Implement edit logic here, e.g., navigate to the post edit page
+    };
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+        className: "post-list",
+        children: posts.map((post)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                className: "post-item",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                                 children: post.title
                             }, void 0, false, {
                                 fileName: "[project]/src/components/PostList.tsx",
-                                lineNumber: 24,
+                                lineNumber: 43,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 children: post.content
                             }, void 0, false, {
                                 fileName: "[project]/src/components/PostList.tsx",
-                                lineNumber: 25,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                onClick: ()=>onDelete(post.id),
-                                children: "Delete"
-                            }, void 0, false, {
-                                fileName: "[project]/src/components/PostList.tsx",
-                                lineNumber: 26,
+                                lineNumber: 44,
                                 columnNumber: 13
                             }, this)
                         ]
-                    }, post.id, true, {
+                    }, void 0, true, {
                         fileName: "[project]/src/components/PostList.tsx",
-                        lineNumber: 23,
+                        lineNumber: 42,
                         columnNumber: 11
-                    }, this))
-            }, void 0, false, {
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "post-actions",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                className: "view",
+                                onClick: ()=>handleView(post.id),
+                                children: "View"
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/PostList.tsx",
+                                lineNumber: 47,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                className: "edit",
+                                onClick: ()=>handleEdit(post.id),
+                                children: "Edit"
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/PostList.tsx",
+                                lineNumber: 48,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                className: "delete",
+                                onClick: ()=>handleDelete(post.id),
+                                children: "Delete"
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/PostList.tsx",
+                                lineNumber: 49,
+                                columnNumber: 13
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/components/PostList.tsx",
+                        lineNumber: 46,
+                        columnNumber: 11
+                    }, this)
+                ]
+            }, post.id, true, {
                 fileName: "[project]/src/components/PostList.tsx",
-                lineNumber: 21,
-                columnNumber: 7
-            }, this)
-        ]
-    }, void 0, true, {
+                lineNumber: 41,
+                columnNumber: 9
+            }, this))
+    }, void 0, false, {
         fileName: "[project]/src/components/PostList.tsx",
-        lineNumber: 19,
+        lineNumber: 39,
         columnNumber: 5
     }, this);
 }
@@ -75,7 +115,7 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 
 __turbopack_context__.s([
     "default",
-    ()=>__TURBOPACK__default__export__
+    ()=>PostsPage
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
@@ -85,47 +125,68 @@ var _s = __turbopack_context__.k.signature();
 "use client";
 ;
 ;
-const PostsPage = ()=>{
+function PostsPage() {
     _s();
     const [posts, setPosts] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
+    const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(true);
+    const fetchPosts = async ()=>{
+        setLoading(true);
+        const res = await fetch('/api/posts');
+        if (res.ok) {
+            setPosts(await res.json());
+        } else {
+            console.error('Failed to load posts');
+        }
+        setLoading(false);
+    };
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "PostsPage.useEffect": ()=>{
-            const fetchPosts = {
-                "PostsPage.useEffect.fetchPosts": async ()=>{
-                    const response = await fetch('/api/posts');
-                    const data = await response.json();
-                    setPosts(data);
-                }
-            }["PostsPage.useEffect.fetchPosts"];
             fetchPosts();
         }
     }["PostsPage.useEffect"], []);
+    const handleDelete = async (id)=>{
+        if (!confirm('Delete this post?')) return;
+        const res = await fetch(`/api/posts/${id}`, {
+            method: 'DELETE'
+        });
+        if (res.ok) {
+            setPosts((p)=>p.filter((x)=>x.id !== id));
+        } else {
+            console.error('Delete failed');
+        }
+    };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
                 children: "Posts"
             }, void 0, false, {
                 fileName: "[project]/src/app/posts/page.tsx",
-                lineNumber: 20,
+                lineNumber: 42,
                 columnNumber: 7
-            }, ("TURBOPACK compile-time value", void 0)),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$PostList$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                posts: posts
+            }, this),
+            loading ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                children: "Loading..."
             }, void 0, false, {
                 fileName: "[project]/src/app/posts/page.tsx",
-                lineNumber: 21,
-                columnNumber: 7
-            }, ("TURBOPACK compile-time value", void 0))
+                lineNumber: 43,
+                columnNumber: 18
+            }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$PostList$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                posts: posts,
+                onDelete: handleDelete
+            }, void 0, false, {
+                fileName: "[project]/src/app/posts/page.tsx",
+                lineNumber: 43,
+                columnNumber: 38
+            }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/posts/page.tsx",
-        lineNumber: 19,
+        lineNumber: 41,
         columnNumber: 5
-    }, ("TURBOPACK compile-time value", void 0));
-};
-_s(PostsPage, "bG8V4duoIfO0BEPgauWMVT5Qvyw=");
+    }, this);
+}
+_s(PostsPage, "RbKeE0iIFzYv1PT2nn3dHnXn06o=");
 _c = PostsPage;
-const __TURBOPACK__default__export__ = PostsPage;
 var _c;
 __turbopack_context__.k.register(_c, "PostsPage");
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {

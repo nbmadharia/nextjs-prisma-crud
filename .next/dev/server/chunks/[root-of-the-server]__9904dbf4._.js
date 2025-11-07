@@ -81,6 +81,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__
 ;
 async function GET() {
     const posts = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].post.findMany();
+    console.log('Fetched posts outside');
     return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json(posts);
 }
 async function POST(request) {
@@ -88,6 +89,7 @@ async function POST(request) {
     const post = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].post.create({
         data: body
     });
+    console.log(`Post created with id ${post.id} outside`);
     return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json(post, {
         status: 201
     });
@@ -101,6 +103,7 @@ async function PUT(request) {
         },
         data: body
     });
+    console.log(`Post with id ${id} updated outside`);
     return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json(post);
 }
 async function DELETE(request) {
@@ -110,8 +113,9 @@ async function DELETE(request) {
             id
         }
     });
+    console.log(`Post with id ${id} deleted outside`);
     return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json({
-        message: 'Post deleted'
+        message: 'Post deleted out'
     });
 }
 }),

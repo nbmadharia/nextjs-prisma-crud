@@ -16,6 +16,7 @@ export default function PostsPage() {
     setLoading(true);
     const res = await fetch('/api/posts');
     if (res.ok) {
+      console.log('Fetched posts successfully outside new ');
       setPosts(await res.json());
     } else {
       console.error('Failed to load posts');
@@ -31,6 +32,7 @@ export default function PostsPage() {
     if (!confirm('Delete this post?')) return;
     const res = await fetch(`/api/posts/${id}`, { method: 'DELETE' });
     if (res.ok) {
+      console.log(`Post with id ${id} deleted successfully outside new`);
       setPosts((p) => p.filter((x) => x.id !== id));
     } else {
       console.error('Delete failed');

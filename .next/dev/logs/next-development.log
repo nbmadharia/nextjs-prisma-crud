@@ -1,2 +1,1224 @@
-[00:00:01.055] Server  LOG      ✓ Ready in 778ms
-[00:01:54.179] Server  LOG      ✓ Compiled in 16ms
+[00:00:01.080] Server  LOG      ✓ Ready in 790ms
+[00:00:40.130] Server  LOG      ✓ Compiled in 10ms
+[00:00:51.822] Server  LOG      ✓ Compiled in 35ms
+[00:02:24.581] Server  LOG      ✓ Compiled in 61ms
+[00:02:41.467] Server  ERROR    ⨯ ./src/app/posts/[id]/page.tsx:2:1
+Ecmascript file had an error
+  1 | import { useEffect, useState } from 'react';
+> 2 | import { useRouter } from 'next/router';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | const PostPage = () => {
+  5 |   const router = useRouter();
+
+You have a Server Component that imports next/router. Use next/navigation instead.
+Learn more: https://nextjs.org/docs/app/api-reference/functions/use-router
+
+
+
+./src/app/posts/[id]/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useEffect, useState } from 'react';
+    |          ^^^^^^^^^
+  2 | import { useRouter } from 'next/router';
+  3 |
+  4 | const PostPage = () => {
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+
+./src/app/posts/[id]/page.tsx:1:21
+Ecmascript file had an error
+> 1 | import { useEffect, useState } from 'react';
+    |                     ^^^^^^^^
+  2 | import { useRouter } from 'next/router';
+  3 |
+  4 | const PostPage = () => {
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+[00:02:41.592] Browser ERROR   ./src/app/posts/[id]/page.tsx:2:1
+Ecmascript file had an error
+  1 | import { useEffect, useState } from 'react';
+> 2 | import { useRouter } from 'next/router';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | const PostPage = () => {
+  5 |   const router = useRouter();
+
+You have a Server Component that imports next/router. Use next/navigation instead.
+Learn more: https://nextjs.org/docs/app/api-reference/functions/use-router
+[00:02:41.592] Browser ERROR   ./src/app/posts/[id]/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useEffect, useState } from 'react';
+    |          ^^^^^^^^^
+  2 | import { useRouter } from 'next/router';
+  3 |
+  4 | const PostPage = () => {
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:02:41.592] Browser ERROR   ./src/app/posts/[id]/page.tsx:1:21
+Ecmascript file had an error
+> 1 | import { useEffect, useState } from 'react';
+    |                     ^^^^^^^^
+  2 | import { useRouter } from 'next/router';
+  3 |
+  4 | const PostPage = () => {
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:02:42.200] Browser ERROR   ./src/app/posts/[id]/page.tsx:2:1
+Ecmascript file had an error
+  1 | import { useEffect, useState } from 'react';
+> 2 | import { useRouter } from 'next/router';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | const PostPage = () => {
+  5 |   const router = useRouter();
+
+You have a Server Component that imports next/router. Use next/navigation instead.
+Learn more: https://nextjs.org/docs/app/api-reference/functions/use-router
+[00:02:42.200] Browser ERROR   ./src/app/posts/[id]/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useEffect, useState } from 'react';
+    |          ^^^^^^^^^
+  2 | import { useRouter } from 'next/router';
+  3 |
+  4 | const PostPage = () => {
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:02:42.200] Browser ERROR   ./src/app/posts/[id]/page.tsx:1:21
+Ecmascript file had an error
+> 1 | import { useEffect, useState } from 'react';
+    |                     ^^^^^^^^
+  2 | import { useRouter } from 'next/router';
+  3 |
+  4 | const PostPage = () => {
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:02:42.200] Browser ERROR   ./src/app/posts/[id]/page.tsx:2:1
+Ecmascript file had an error
+  1 | import { useEffect, useState } from 'react';
+> 2 | import { useRouter } from 'next/router';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | const PostPage = () => {
+  5 |   const router = useRouter();
+
+You have a Server Component that imports next/router. Use next/navigation instead.
+Learn more: https://nextjs.org/docs/app/api-reference/functions/use-router
+[00:02:42.200] Browser ERROR   ./src/app/posts/[id]/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useEffect, useState } from 'react';
+    |          ^^^^^^^^^
+  2 | import { useRouter } from 'next/router';
+  3 |
+  4 | const PostPage = () => {
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:02:42.200] Browser ERROR   ./src/app/posts/[id]/page.tsx:1:21
+Ecmascript file had an error
+> 1 | import { useEffect, useState } from 'react';
+    |                     ^^^^^^^^
+  2 | import { useRouter } from 'next/router';
+  3 |
+  4 | const PostPage = () => {
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:02:42.501] Browser ERROR   ./src/app/posts/[id]/page.tsx:2:1
+Ecmascript file had an error
+  1 | import { useEffect, useState } from 'react';
+> 2 | import { useRouter } from 'next/router';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | const PostPage = () => {
+  5 |   const router = useRouter();
+
+You have a Server Component that imports next/router. Use next/navigation instead.
+Learn more: https://nextjs.org/docs/app/api-reference/functions/use-router
+[00:02:42.501] Browser ERROR   ./src/app/posts/[id]/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useEffect, useState } from 'react';
+    |          ^^^^^^^^^
+  2 | import { useRouter } from 'next/router';
+  3 |
+  4 | const PostPage = () => {
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:02:42.501] Browser ERROR   ./src/app/posts/[id]/page.tsx:1:21
+Ecmascript file had an error
+> 1 | import { useEffect, useState } from 'react';
+    |                     ^^^^^^^^
+  2 | import { useRouter } from 'next/router';
+  3 |
+  4 | const PostPage = () => {
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:02:42.519] Server  ERROR    ⨯ ./src/app/posts/[id]/page.tsx:2:1
+Ecmascript file had an error
+  1 | import { useEffect, useState } from 'react';
+> 2 | import { useRouter } from 'next/router';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | const PostPage = () => {
+  5 |   const router = useRouter();
+
+You have a Server Component that imports next/router. Use next/navigation instead.
+Learn more: https://nextjs.org/docs/app/api-reference/functions/use-router
+
+
+
+./src/app/posts/[id]/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useEffect, useState } from 'react';
+    |          ^^^^^^^^^
+  2 | import { useRouter } from 'next/router';
+  3 |
+  4 | const PostPage = () => {
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+
+./src/app/posts/[id]/page.tsx:1:21
+Ecmascript file had an error
+> 1 | import { useEffect, useState } from 'react';
+    |                     ^^^^^^^^
+  2 | import { useRouter } from 'next/router';
+  3 |
+  4 | const PostPage = () => {
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+[00:02:42.728] Browser ERROR   uncaughtError: Error: ./src/app/posts/[id]/page.tsx:2:1
+Ecmascript file had an error
+  1 | import { useEffect, useState } from 'react';
+> 2 | import { useRouter } from 'next/router';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | const PostPage = () => {
+  5 |   const router = useRouter();
+
+You have a Server Component that imports next/router. Use next/navigation instead.
+Learn more: https://nextjs.org/docs/app/api-reference/functions/use-router
+
+
+[00:02:42.954] Browser ERROR   ./src/app/posts/[id]/page.tsx:2:1
+Ecmascript file had an error
+  1 | import { useEffect, useState } from 'react';
+> 2 | import { useRouter } from 'next/router';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | const PostPage = () => {
+  5 |   const router = useRouter();
+
+You have a Server Component that imports next/router. Use next/navigation instead.
+Learn more: https://nextjs.org/docs/app/api-reference/functions/use-router
+[00:02:42.954] Browser ERROR   ./src/app/posts/[id]/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useEffect, useState } from 'react';
+    |          ^^^^^^^^^
+  2 | import { useRouter } from 'next/router';
+  3 |
+  4 | const PostPage = () => {
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:02:42.954] Browser ERROR   ./src/app/posts/[id]/page.tsx:1:21
+Ecmascript file had an error
+> 1 | import { useEffect, useState } from 'react';
+    |                     ^^^^^^^^
+  2 | import { useRouter } from 'next/router';
+  3 |
+  4 | const PostPage = () => {
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:02:42.954] Browser ERROR   ./src/app/posts/[id]/page.tsx:2:1
+Ecmascript file had an error
+  1 | import { useEffect, useState } from 'react';
+> 2 | import { useRouter } from 'next/router';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | const PostPage = () => {
+  5 |   const router = useRouter();
+
+You have a Server Component that imports next/router. Use next/navigation instead.
+Learn more: https://nextjs.org/docs/app/api-reference/functions/use-router
+[00:02:42.954] Browser ERROR   ./src/app/posts/[id]/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useEffect, useState } from 'react';
+    |          ^^^^^^^^^
+  2 | import { useRouter } from 'next/router';
+  3 |
+  4 | const PostPage = () => {
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:02:42.954] Browser ERROR   ./src/app/posts/[id]/page.tsx:1:21
+Ecmascript file had an error
+> 1 | import { useEffect, useState } from 'react';
+    |                     ^^^^^^^^
+  2 | import { useRouter } from 'next/router';
+  3 |
+  4 | const PostPage = () => {
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:02:45.097] Browser ERROR   ./src/app/posts/[id]/page.tsx:2:1
+Ecmascript file had an error
+  1 | import { useEffect, useState } from 'react';
+> 2 | import { useRouter } from 'next/router';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | const PostPage = () => {
+  5 |   const router = useRouter();
+
+You have a Server Component that imports next/router. Use next/navigation instead.
+Learn more: https://nextjs.org/docs/app/api-reference/functions/use-router
+[00:02:45.097] Browser ERROR   ./src/app/posts/[id]/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useEffect, useState } from 'react';
+    |          ^^^^^^^^^
+  2 | import { useRouter } from 'next/router';
+  3 |
+  4 | const PostPage = () => {
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:02:45.097] Browser ERROR   ./src/app/posts/[id]/page.tsx:1:21
+Ecmascript file had an error
+> 1 | import { useEffect, useState } from 'react';
+    |                     ^^^^^^^^
+  2 | import { useRouter } from 'next/router';
+  3 |
+  4 | const PostPage = () => {
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:02:45.097] Browser ERROR   ./src/app/posts/[id]/page.tsx:2:1
+Ecmascript file had an error
+  1 | import { useEffect, useState } from 'react';
+> 2 | import { useRouter } from 'next/router';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | const PostPage = () => {
+  5 |   const router = useRouter();
+
+You have a Server Component that imports next/router. Use next/navigation instead.
+Learn more: https://nextjs.org/docs/app/api-reference/functions/use-router
+[00:02:45.097] Browser ERROR   ./src/app/posts/[id]/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useEffect, useState } from 'react';
+    |          ^^^^^^^^^
+  2 | import { useRouter } from 'next/router';
+  3 |
+  4 | const PostPage = () => {
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:02:45.097] Browser ERROR   ./src/app/posts/[id]/page.tsx:1:21
+Ecmascript file had an error
+> 1 | import { useEffect, useState } from 'react';
+    |                     ^^^^^^^^
+  2 | import { useRouter } from 'next/router';
+  3 |
+  4 | const PostPage = () => {
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:02:50.129] Browser ERROR   ./src/app/posts/[id]/page.tsx:2:1
+Ecmascript file had an error
+  1 | import { useEffect, useState } from 'react';
+> 2 | import { useRouter } from 'next/router';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | const PostPage = () => {
+  5 |   const router = useRouter();
+
+You have a Server Component that imports next/router. Use next/navigation instead.
+Learn more: https://nextjs.org/docs/app/api-reference/functions/use-router
+[00:02:50.129] Browser ERROR   ./src/app/posts/[id]/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useEffect, useState } from 'react';
+    |          ^^^^^^^^^
+  2 | import { useRouter } from 'next/router';
+  3 |
+  4 | const PostPage = () => {
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:02:50.129] Browser ERROR   ./src/app/posts/[id]/page.tsx:1:21
+Ecmascript file had an error
+> 1 | import { useEffect, useState } from 'react';
+    |                     ^^^^^^^^
+  2 | import { useRouter } from 'next/router';
+  3 |
+  4 | const PostPage = () => {
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:02:50.196] Browser ERROR   uncaughtError: Error: ./src/app/posts/[id]/page.tsx:2:1
+Ecmascript file had an error
+  1 | import { useEffect, useState } from 'react';
+> 2 | import { useRouter } from 'next/router';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | const PostPage = () => {
+  5 |   const router = useRouter();
+
+You have a Server Component that imports next/router. Use next/navigation instead.
+Learn more: https://nextjs.org/docs/app/api-reference/functions/use-router
+
+
+[00:02:50.229] Browser ERROR   ./src/app/posts/[id]/page.tsx:2:1
+Ecmascript file had an error
+  1 | import { useEffect, useState } from 'react';
+> 2 | import { useRouter } from 'next/router';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | const PostPage = () => {
+  5 |   const router = useRouter();
+
+You have a Server Component that imports next/router. Use next/navigation instead.
+Learn more: https://nextjs.org/docs/app/api-reference/functions/use-router
+[00:02:50.229] Browser ERROR   ./src/app/posts/[id]/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useEffect, useState } from 'react';
+    |          ^^^^^^^^^
+  2 | import { useRouter } from 'next/router';
+  3 |
+  4 | const PostPage = () => {
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:02:50.229] Browser ERROR   ./src/app/posts/[id]/page.tsx:1:21
+Ecmascript file had an error
+> 1 | import { useEffect, useState } from 'react';
+    |                     ^^^^^^^^
+  2 | import { useRouter } from 'next/router';
+  3 |
+  4 | const PostPage = () => {
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:02:50.341] Browser ERROR   ./src/app/posts/[id]/page.tsx:2:1
+Ecmascript file had an error
+  1 | import { useEffect, useState } from 'react';
+> 2 | import { useRouter } from 'next/router';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | const PostPage = () => {
+  5 |   const router = useRouter();
+
+You have a Server Component that imports next/router. Use next/navigation instead.
+Learn more: https://nextjs.org/docs/app/api-reference/functions/use-router
+[00:02:50.341] Browser ERROR   ./src/app/posts/[id]/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useEffect, useState } from 'react';
+    |          ^^^^^^^^^
+  2 | import { useRouter } from 'next/router';
+  3 |
+  4 | const PostPage = () => {
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:02:50.341] Browser ERROR   ./src/app/posts/[id]/page.tsx:1:21
+Ecmascript file had an error
+> 1 | import { useEffect, useState } from 'react';
+    |                     ^^^^^^^^
+  2 | import { useRouter } from 'next/router';
+  3 |
+  4 | const PostPage = () => {
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:02:50.341] Browser ERROR   ./src/app/posts/[id]/page.tsx:2:1
+Ecmascript file had an error
+  1 | import { useEffect, useState } from 'react';
+> 2 | import { useRouter } from 'next/router';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | const PostPage = () => {
+  5 |   const router = useRouter();
+
+You have a Server Component that imports next/router. Use next/navigation instead.
+Learn more: https://nextjs.org/docs/app/api-reference/functions/use-router
+[00:02:50.341] Browser ERROR   ./src/app/posts/[id]/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useEffect, useState } from 'react';
+    |          ^^^^^^^^^
+  2 | import { useRouter } from 'next/router';
+  3 |
+  4 | const PostPage = () => {
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:02:50.341] Browser ERROR   ./src/app/posts/[id]/page.tsx:1:21
+Ecmascript file had an error
+> 1 | import { useEffect, useState } from 'react';
+    |                     ^^^^^^^^
+  2 | import { useRouter } from 'next/router';
+  3 |
+  4 | const PostPage = () => {
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:02:54.166] Browser ERROR   uncaughtError: Error: ./src/app/posts/[id]/page.tsx:2:1
+Ecmascript file had an error
+  1 | import { useEffect, useState } from 'react';
+> 2 | import { useRouter } from 'next/router';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | const PostPage = () => {
+  5 |   const router = useRouter();
+
+You have a Server Component that imports next/router. Use next/navigation instead.
+Learn more: https://nextjs.org/docs/app/api-reference/functions/use-router
+
+
+[00:02:54.179] Browser ERROR   ./src/app/posts/[id]/page.tsx:2:1
+Ecmascript file had an error
+  1 | import { useEffect, useState } from 'react';
+> 2 | import { useRouter } from 'next/router';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | const PostPage = () => {
+  5 |   const router = useRouter();
+
+You have a Server Component that imports next/router. Use next/navigation instead.
+Learn more: https://nextjs.org/docs/app/api-reference/functions/use-router
+[00:02:54.179] Browser ERROR   ./src/app/posts/[id]/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useEffect, useState } from 'react';
+    |          ^^^^^^^^^
+  2 | import { useRouter } from 'next/router';
+  3 |
+  4 | const PostPage = () => {
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:02:54.179] Browser ERROR   ./src/app/posts/[id]/page.tsx:1:21
+Ecmascript file had an error
+> 1 | import { useEffect, useState } from 'react';
+    |                     ^^^^^^^^
+  2 | import { useRouter } from 'next/router';
+  3 |
+  4 | const PostPage = () => {
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:02:54.302] Browser ERROR   ./src/app/posts/[id]/page.tsx:2:1
+Ecmascript file had an error
+  1 | import { useEffect, useState } from 'react';
+> 2 | import { useRouter } from 'next/router';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | const PostPage = () => {
+  5 |   const router = useRouter();
+
+You have a Server Component that imports next/router. Use next/navigation instead.
+Learn more: https://nextjs.org/docs/app/api-reference/functions/use-router
+[00:02:54.302] Browser ERROR   ./src/app/posts/[id]/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useEffect, useState } from 'react';
+    |          ^^^^^^^^^
+  2 | import { useRouter } from 'next/router';
+  3 |
+  4 | const PostPage = () => {
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:02:54.302] Browser ERROR   ./src/app/posts/[id]/page.tsx:1:21
+Ecmascript file had an error
+> 1 | import { useEffect, useState } from 'react';
+    |                     ^^^^^^^^
+  2 | import { useRouter } from 'next/router';
+  3 |
+  4 | const PostPage = () => {
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:02:54.303] Browser ERROR   ./src/app/posts/[id]/page.tsx:2:1
+Ecmascript file had an error
+  1 | import { useEffect, useState } from 'react';
+> 2 | import { useRouter } from 'next/router';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | const PostPage = () => {
+  5 |   const router = useRouter();
+
+You have a Server Component that imports next/router. Use next/navigation instead.
+Learn more: https://nextjs.org/docs/app/api-reference/functions/use-router
+[00:02:54.303] Browser ERROR   ./src/app/posts/[id]/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useEffect, useState } from 'react';
+    |          ^^^^^^^^^
+  2 | import { useRouter } from 'next/router';
+  3 |
+  4 | const PostPage = () => {
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:02:54.303] Browser ERROR   ./src/app/posts/[id]/page.tsx:1:21
+Ecmascript file had an error
+> 1 | import { useEffect, useState } from 'react';
+    |                     ^^^^^^^^
+  2 | import { useRouter } from 'next/router';
+  3 |
+  4 | const PostPage = () => {
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:02:54.303] Browser ERROR   ./src/app/posts/[id]/page.tsx:2:1
+Ecmascript file had an error
+  1 | import { useEffect, useState } from 'react';
+> 2 | import { useRouter } from 'next/router';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | const PostPage = () => {
+  5 |   const router = useRouter();
+
+You have a Server Component that imports next/router. Use next/navigation instead.
+Learn more: https://nextjs.org/docs/app/api-reference/functions/use-router
+[00:02:54.303] Browser ERROR   ./src/app/posts/[id]/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useEffect, useState } from 'react';
+    |          ^^^^^^^^^
+  2 | import { useRouter } from 'next/router';
+  3 |
+  4 | const PostPage = () => {
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:02:54.303] Browser ERROR   ./src/app/posts/[id]/page.tsx:1:21
+Ecmascript file had an error
+> 1 | import { useEffect, useState } from 'react';
+    |                     ^^^^^^^^
+  2 | import { useRouter } from 'next/router';
+  3 |
+  4 | const PostPage = () => {
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:02:55.405] Browser ERROR   uncaughtError: Error: ./src/app/posts/[id]/page.tsx:2:1
+Ecmascript file had an error
+  1 | import { useEffect, useState } from 'react';
+> 2 | import { useRouter } from 'next/router';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | const PostPage = () => {
+  5 |   const router = useRouter();
+
+You have a Server Component that imports next/router. Use next/navigation instead.
+Learn more: https://nextjs.org/docs/app/api-reference/functions/use-router
+
+
+[00:02:55.416] Browser ERROR   ./src/app/posts/[id]/page.tsx:2:1
+Ecmascript file had an error
+  1 | import { useEffect, useState } from 'react';
+> 2 | import { useRouter } from 'next/router';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | const PostPage = () => {
+  5 |   const router = useRouter();
+
+You have a Server Component that imports next/router. Use next/navigation instead.
+Learn more: https://nextjs.org/docs/app/api-reference/functions/use-router
+[00:02:55.416] Browser ERROR   ./src/app/posts/[id]/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useEffect, useState } from 'react';
+    |          ^^^^^^^^^
+  2 | import { useRouter } from 'next/router';
+  3 |
+  4 | const PostPage = () => {
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:02:55.416] Browser ERROR   ./src/app/posts/[id]/page.tsx:1:21
+Ecmascript file had an error
+> 1 | import { useEffect, useState } from 'react';
+    |                     ^^^^^^^^
+  2 | import { useRouter } from 'next/router';
+  3 |
+  4 | const PostPage = () => {
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:02:55.416] Browser ERROR   ./src/app/posts/[id]/page.tsx:2:1
+Ecmascript file had an error
+  1 | import { useEffect, useState } from 'react';
+> 2 | import { useRouter } from 'next/router';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | const PostPage = () => {
+  5 |   const router = useRouter();
+
+You have a Server Component that imports next/router. Use next/navigation instead.
+Learn more: https://nextjs.org/docs/app/api-reference/functions/use-router
+[00:02:55.416] Browser ERROR   ./src/app/posts/[id]/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useEffect, useState } from 'react';
+    |          ^^^^^^^^^
+  2 | import { useRouter } from 'next/router';
+  3 |
+  4 | const PostPage = () => {
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:02:55.416] Browser ERROR   ./src/app/posts/[id]/page.tsx:1:21
+Ecmascript file had an error
+> 1 | import { useEffect, useState } from 'react';
+    |                     ^^^^^^^^
+  2 | import { useRouter } from 'next/router';
+  3 |
+  4 | const PostPage = () => {
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:02:55.576] Browser ERROR   ./src/app/posts/[id]/page.tsx:2:1
+Ecmascript file had an error
+  1 | import { useEffect, useState } from 'react';
+> 2 | import { useRouter } from 'next/router';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | const PostPage = () => {
+  5 |   const router = useRouter();
+
+You have a Server Component that imports next/router. Use next/navigation instead.
+Learn more: https://nextjs.org/docs/app/api-reference/functions/use-router
+[00:02:55.576] Browser ERROR   ./src/app/posts/[id]/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useEffect, useState } from 'react';
+    |          ^^^^^^^^^
+  2 | import { useRouter } from 'next/router';
+  3 |
+  4 | const PostPage = () => {
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:02:55.576] Browser ERROR   ./src/app/posts/[id]/page.tsx:1:21
+Ecmascript file had an error
+> 1 | import { useEffect, useState } from 'react';
+    |                     ^^^^^^^^
+  2 | import { useRouter } from 'next/router';
+  3 |
+  4 | const PostPage = () => {
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:02:55.576] Browser ERROR   ./src/app/posts/[id]/page.tsx:2:1
+Ecmascript file had an error
+  1 | import { useEffect, useState } from 'react';
+> 2 | import { useRouter } from 'next/router';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | const PostPage = () => {
+  5 |   const router = useRouter();
+
+You have a Server Component that imports next/router. Use next/navigation instead.
+Learn more: https://nextjs.org/docs/app/api-reference/functions/use-router
+[00:02:55.576] Browser ERROR   ./src/app/posts/[id]/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useEffect, useState } from 'react';
+    |          ^^^^^^^^^
+  2 | import { useRouter } from 'next/router';
+  3 |
+  4 | const PostPage = () => {
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:02:55.576] Browser ERROR   ./src/app/posts/[id]/page.tsx:1:21
+Ecmascript file had an error
+> 1 | import { useEffect, useState } from 'react';
+    |                     ^^^^^^^^
+  2 | import { useRouter } from 'next/router';
+  3 |
+  4 | const PostPage = () => {
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:03:55.185] Server  LOG      ✓ Compiled in 147ms
+[00:04:06.793] Browser ERROR   uncaughtError: Error: NextRouter was not mounted. https://nextjs.org/docs/messages/next-router-not-mounted
+[00:08:59.748] Server  LOG      ✓ Compiled in 2ms
+[00:10:39.239] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:10:39.389] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/posts" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <body
+-                           cz-shortcut-listen="true"
+                          >
+                  ...
+
+[00:11:22.656] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:11:22.881] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/posts" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <body
+-                           cz-shortcut-listen="true"
+                          >
+                  ...
+
+[00:11:29.294] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:12:09.849] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:12:10.065] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/posts" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <body
+-                           cz-shortcut-listen="true"
+                          >
+                  ...
+
+[00:12:10.072] Server  LOG     Fetched posts outside
+[00:13:05.691] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:13:05.805] Server  LOG     Fetched posts outside
+[00:13:05.855] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/posts" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <body
+-                           cz-shortcut-listen="true"
+                          >
+                  ...
+
+[00:14:42.277] Server  LOG      ✓ Compiled in 11ms
+[00:14:58.558] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:14:58.701] Server  LOG     Fetched posts outside
+[00:14:58.817] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/posts" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <body
+-                           cz-shortcut-listen="true"
+                          >
+                  ...
+
+[00:14:58.817] Browser LOG     Fetched posts successfully outside new 
+[00:15:52.605] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:15:52.702] Server  LOG     Fetched posts outside
+[00:15:52.806] Browser LOG     Fetched posts successfully outside new 
+[00:18:53.351] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:18:53.565] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <body
+-                           cz-shortcut-listen="true"
+                          >
+                  ...
+
+[00:21:18.539] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:22:51.665] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <body
+-                           cz-shortcut-listen="true"
+                          >
+                  ...
+
+[00:22:53.886] Server  LOG     Fetched posts outside
+[00:22:53.992] Browser LOG     Fetched posts successfully outside new 
+[00:22:56.598] Browser ERROR   uncaughtError: Error: NextRouter was not mounted. https://nextjs.org/docs/messages/next-router-not-mounted
+[00:23:14.118] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <body
+-                           cz-shortcut-listen="true"
+                          >
+                  ...
+
+[00:23:15.478] Server  LOG     Fetched posts outside
+[00:23:15.591] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/posts" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <body
+-                           cz-shortcut-listen="true"
+                          >
+                  ...
+
+[00:23:15.591] Browser LOG     Fetched posts successfully outside new 
+[00:23:45.832] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/posts/new" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <body
+-                           cz-shortcut-listen="true"
+                          >
+                  ...
+
+[00:23:49.304] Server  LOG     Post created with id 10 outside
+[00:23:49.411] Server  LOG     Fetched posts outside
+[00:23:49.415] Browser LOG     Post created successfully inside new
+[00:23:49.429] Server  LOG     Fetched posts outside
+[00:23:49.534] Browser LOG     Fetched posts successfully outside new 
+[00:23:49.534] Browser LOG     Fetched posts successfully outside new 
+[00:30:11.885] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <body
+-                           cz-shortcut-listen="true"
+                          >
+                  ...
+
+[00:30:13.147] Server  LOG     Fetched posts outside
+[00:30:13.251] Browser LOG     Fetched posts successfully outside new 
+[00:30:15.950] Server  LOG     Fetched posts outside
+[00:30:16.055] Browser LOG     Fetched posts successfully outside new 
+[00:30:19.821] Server  LOG     Fetched posts outside
+[00:30:19.836] Server  LOG     Fetched posts outside
+[00:30:19.939] Browser LOG     Fetched posts successfully outside new 
+[00:30:19.939] Browser LOG     Fetched posts successfully outside new 
+[00:30:27.931] Server  LOG     Post created with id 11 outside
+[00:30:28.011] Server  LOG     Fetched posts outside
+[00:30:28.024] Server  LOG     Fetched posts outside
+[00:30:28.128] Browser LOG     Post created successfully inside new
+[00:30:28.128] Browser LOG     Fetched posts successfully outside new 
+[00:30:28.128] Browser LOG     Fetched posts successfully outside new 

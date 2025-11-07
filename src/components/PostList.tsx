@@ -36,9 +36,15 @@ export default function PostList({
             <p>{post.content}</p>
           </div>
           <div className="post-actions">
-            <Link href={`/posts/${post.id}`}>View</Link>
-            <Link href={`/posts/${post.id}/edit`} className="secondary">Edit</Link>
-            <button onClick={() => handleDelete(post.id)}>Delete</button>
+            <Link href={`/posts/${post.id}`}>
+              <button className="view" type="button">View</button>
+            </Link>
+            <Link href={`/posts/${post.id}/edit`}>
+              <button className="edit" type="button">Edit</button>
+            </Link>
+            <button className="delete" type="button" onClick={() => handleDelete(post.id)}>
+              Delete
+            </button>
           </div>
         </li>
       ))}

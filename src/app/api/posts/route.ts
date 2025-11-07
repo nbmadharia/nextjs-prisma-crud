@@ -3,6 +3,7 @@ import prisma from '@/lib/prisma';
 
 export async function GET() {
     const posts = await prisma.post.findMany();
+    console.log('Fetched posts outside');
     return NextResponse.json(posts);
 }
 
@@ -11,7 +12,9 @@ export async function POST(request: Request) {
     const post = await prisma.post.create({
         data: body,
     });
+    console.log(`Post created with id ${post.id} outside`);
     return NextResponse.json(post, { status: 201 });
+
 }
 
 export async function PUT(request: Request) {
@@ -21,6 +24,7 @@ export async function PUT(request: Request) {
         where: { id },
         data: body,
     });
+    console.log(`Post with id ${id} updated outside`);
     return NextResponse.json(post);
 }
 
@@ -29,5 +33,6 @@ export async function DELETE(request: Request) {
     await prisma.post.delete({
         where: { id },
     });
-    return NextResponse.json({ message: 'Post deleted' });
+    console.log(`Post with id ${id} deleted outside`);
+    return NextResponse.json({ message: 'Post deleted out' });
 }

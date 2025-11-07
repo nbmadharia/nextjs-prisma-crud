@@ -20,6 +20,9 @@ export default function NewPostPage() {
       if (!response.ok) {
         throw new Error('Failed to create post');
       }
+      else{
+        console.log('Post created successfully inside new');
+      }
 
       router.push('/posts');
     } catch (error) {

@@ -56,7 +56,15 @@ function PostList({ posts, onDelete }) {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                 href: `/posts/${post.id}`,
-                                children: "View"
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                    className: "view",
+                                    type: "button",
+                                    children: "View"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/PostList.tsx",
+                                    lineNumber: 40,
+                                    columnNumber: 15
+                                }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/PostList.tsx",
                                 lineNumber: 39,
@@ -64,19 +72,28 @@ function PostList({ posts, onDelete }) {
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                 href: `/posts/${post.id}/edit`,
-                                className: "secondary",
-                                children: "Edit"
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                    className: "edit",
+                                    type: "button",
+                                    children: "Edit"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/PostList.tsx",
+                                    lineNumber: 43,
+                                    columnNumber: 15
+                                }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/PostList.tsx",
-                                lineNumber: 40,
+                                lineNumber: 42,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                className: "delete",
+                                type: "button",
                                 onClick: ()=>handleDelete(post.id),
                                 children: "Delete"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/PostList.tsx",
-                                lineNumber: 41,
+                                lineNumber: 45,
                                 columnNumber: 13
                             }, this)
                         ]
@@ -127,6 +144,7 @@ function PostsPage() {
         setLoading(true);
         const res = await fetch('/api/posts');
         if (res.ok) {
+            console.log('Fetched posts successfully outside new ');
             setPosts(await res.json());
         } else {
             console.error('Failed to load posts');
@@ -144,6 +162,7 @@ function PostsPage() {
             method: 'DELETE'
         });
         if (res.ok) {
+            console.log(`Post with id ${id} deleted successfully outside new`);
             setPosts((p)=>p.filter((x)=>x.id !== id));
         } else {
             console.error('Delete failed');
@@ -155,27 +174,27 @@ function PostsPage() {
                 children: "Posts"
             }, void 0, false, {
                 fileName: "[project]/src/app/posts/page.tsx",
-                lineNumber: 42,
+                lineNumber: 44,
                 columnNumber: 7
             }, this),
             loading ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                 children: "Loading..."
             }, void 0, false, {
                 fileName: "[project]/src/app/posts/page.tsx",
-                lineNumber: 43,
+                lineNumber: 45,
                 columnNumber: 18
             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$PostList$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                 posts: posts,
                 onDelete: handleDelete
             }, void 0, false, {
                 fileName: "[project]/src/app/posts/page.tsx",
-                lineNumber: 43,
+                lineNumber: 45,
                 columnNumber: 38
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/posts/page.tsx",
-        lineNumber: 41,
+        lineNumber: 43,
         columnNumber: 5
     }, this);
 }

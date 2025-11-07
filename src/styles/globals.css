@@ -88,20 +88,66 @@ textarea{min-height:120px;resize:vertical}
 input:focus,textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(37,99,235,0.08)}
 
 /* Buttons */
-button{
-  display:inline-block;
-  padding:0.55rem 0.9rem;
-  border-radius:6px;
-  border:0;
-  cursor:pointer;
-  font-weight:600;
-  color:white;
-  background:var(--accent);
+button,
+.button {
+  display: inline-block;
+  padding: 0.6rem 1.1rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
 }
-button.secondary{
-  background:transparent;
-  color:var(--accent);
-  border:1px solid #c7d2fe;
+
+button.view,
+.button.view {
+  background: #e0e7ff;
+  color: #3730a3;
+  border: 1px solid #c7d2fe;
+}
+
+button.edit,
+.button.edit {
+  background: #fef9c3;
+  color: #b45309;
+  border: 1px solid #fde68a;
+}
+
+button.delete,
+.button.delete {
+  background: #fee2e2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+}
+
+button.view:hover,
+.button.view:hover {
+  background: #c7d2fe;
+  color: #312e81;
+}
+
+button.edit:hover,
+.button.edit:hover {
+  background: #fde68a;
+  color: #92400e;
+}
+
+button.delete:hover,
+.button.delete:hover {
+  background: #fecaca;
+  color: #b91c1c;
+}
+
+/* Make title input larger and more prominent */
+input[type="text"] {
+  font-size: 1.2rem;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background: #f7fafc;
+  margin-bottom: 0.5rem;
 }
 
 /* Lists & cards */

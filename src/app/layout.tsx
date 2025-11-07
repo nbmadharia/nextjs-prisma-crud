@@ -9,7 +9,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <header>
-          <h1>Next Prisma CRUD</h1>
+          <h1>Traning CRUD Ops</h1>
           <nav>
             <ul>
               <li><a href="/">Home</a></li>
@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
         </header>
         <main>{children}</main>
         <footer>
-          <p>&copy; {new Date().getFullYear()} Next Prisma CRUD</p>
+          <p>&copy; 2025 NamanMadharia</p>
         </footer>
       </body>
     </html>
