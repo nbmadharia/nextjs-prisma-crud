@@ -22,20 +22,46 @@ body{
 }
 
 /* Layout */
-header{
-  background:linear-gradient(90deg,#fff 0%, #f1f5f9 100%);
-  padding:1rem 2rem;
-  border-bottom:1px solid #e6edf3;
+header {
+  background: #f5f7fa;
+  padding: 2rem 0 1rem 0;
+  border-bottom: 1px solid #e2e8f0;
+  margin-bottom: 2rem;
 }
-header h1{margin:0;font-size:1.25rem}
-header nav ul{
-  list-style:none;
-  padding:0;
-  margin:0.5rem 0 0;
-  display:flex;
-  gap:1rem;
+
+header h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  color: #2d3748;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-header a{color:var(--accent);text-decoration:none;font-weight:500}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  color: #4a5568;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #667eea;
+}
+
 main{max-width:900px;margin:2rem auto;padding:0 1rem}
 
 /* Form */
