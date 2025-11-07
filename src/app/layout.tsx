@@ -1,9 +1,8 @@
-import './globals.css';
+import '../styles/globals.css'
 
 export const metadata = {
   title: 'Next Prisma CRUD',
-  description: 'A simple CRUD application using Next.js and Prisma',
-};
+}
 
 export default function RootLayout({ children }) {
   return (

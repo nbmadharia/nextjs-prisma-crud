@@ -1,8 +1,9 @@
-import { useState } from 'react';
-import { useRouter } from 'next/router';
+"use client";
+import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import PostForm from '../../../components/PostForm';
 
-const NewPostPage = () => {
+export default function NewPostPage() {
   const [error, setError] = useState(null);
   const router = useRouter();
 
@@ -33,6 +34,4 @@ const NewPostPage = () => {
       <PostForm onSubmit={handleSubmit} />
     </div>
   );
-};
-
-export default NewPostPage;
+}

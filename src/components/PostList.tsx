@@ -1,4 +1,6 @@
+"use client";
 import React from 'react';
+import Link from 'next/link';
 
 interface Post {
   id: number;
@@ -6,26 +8,40 @@ interface Post {
   content: string;
 }
 
-interface PostListProps {
+export default function PostList({
+  posts,
+  onDelete,
+}: {
   posts: Post[];
-  onDelete: (id: number) => void;
-}
+  onDelete?: (id: number) => Promise<void> | void;
+}) {
+  const handleDelete = async (id: number) => {
+    if (onDelete) return onDelete(id);
 
-const PostList: React.FC<PostListProps> = ({ posts, onDelete }) => {
+    if (!confirm('Delete this post?')) return;
+    const res = await fetch(`/api/posts/${id}`, { method: 'DELETE' });
+    if (!res.ok) {
+      console.error('Failed to delete post');
+      return;
+    }
+    window.location.reload();
+  };
+
   return (
-    <div>
-      <h2>Post List</h2>
-      <ul>
-        {posts.map(post => (
-          <li key={post.id}>
+    <ul className="post-list">
+      {posts.map((post) => (
+        <li key={post.id} className="post-item">
+          <div>
             <h3>{post.title}</h3>
             <p>{post.content}</p>
-            <button onClick={() => onDelete(post.id)}>Delete</button>
-          </li>
-        ))}
-      </ul>
-    </div>
+          </div>
+          <div className="post-actions">
+            <Link href={`/posts/${post.id}`}>View</Link>
+            <Link href={`/posts/${post.id}/edit`} className="secondary">Edit</Link>
+            <button onClick={() => handleDelete(post.id)}>Delete</button>
+          </div>
+        </li>
+      ))}
+    </ul>
   );
-};
-
-export default PostList;
+}

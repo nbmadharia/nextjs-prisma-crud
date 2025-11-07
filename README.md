@@ -79,3 +79,150 @@ next-prisma-crud
 ## License
 
 This project is licensed under the ISC License.
+
+
+======================================== STEPS. =========================
+
+
+
+1. Scaffold Next app (TypeScript, app router)
+
+# create project
+npx create-next-app@latest next-prisma-crud --ts --use-npm --app
+cd next-prisma-crud
+
+2. Install Prisma + runtime
+
+npm install @prisma/client dotenv
+npm install -D prisma
+
+
+3. Initialize Prisma
+
+npx prisma init
+# this creates prisma/schema.prisma and .env
+
+
+4. Edit .env — set your Postgres URL (replace user/pass/db/host/port)
+
+# open .env and set:
+# DATABASE_URL="postgresql://myuser:password@localhost:5432/mydatabase"
+
+
+5. Update schema.prisma 
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Post {
+  id        Int      @id @default(autoincrement())
+  title     String
+  content   String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+
+
+6. Create the DB (if it doesn't exist) and run migrations
+
+# create DB (mac) - replace db name
+createdb mydatabase
+# run generate + migrate
+npx prisma generate
+npx prisma migrate dev --name init
+# alternative: npx prisma db push (if you don't want a migration)
+
+
+7. Add a Prisma client wrapper for Next dev-hot reload
+
+import { PrismaClient } from '@prisma/client';
+
+declare global {
+  // eslint-disable-next-line no-var
+  var prisma: PrismaClient | undefined;
+}
+
+const prisma = globalThis.prisma ?? new PrismaClient();
+if (process.env.NODE_ENV !== 'production') globalThis.prisma = prisma;
+export default prisma;
+
+
+8. Create API routes (app router example) — minimal posts route
+
+import { NextResponse } from 'next/server';
+import prisma from '@/lib/prisma';
+
+export async function GET() {
+  const posts = await prisma.post.findMany({ orderBy: { createdAt: 'desc' } });
+  return NextResponse.json(posts);
+}
+
+export async function POST(req: Request) {
+  const data = await req.json();
+  const post = await prisma.post.create({ data });
+  return NextResponse.json(post, { status: 201 });
+}
+
+import { NextResponse } from 'next/server';
+import prisma from '@/lib/prisma';
+
+export async function GET(req: Request, { params }: { params: { id: string } }) {
+  const id = Number(params.id);
+  const post = await prisma.post.findUnique({ where: { id } });
+  return NextResponse.json(post);
+}
+
+export async function PUT(req: Request, { params }: { params: { id: string } }) {
+  const id = Number(params.id);
+  const data = await req.json();
+  const post = await prisma.post.update({ where: { id }, data });
+  return NextResponse.json(post);
+}
+
+export async function DELETE(req: Request, { params }: { params: { id: string } }) {
+  const id = Number(params.id);
+  await prisma.post.delete({ where: { id } });
+  return NextResponse.json({ ok: true });
+}
+
+
+9. Add client components (PostForm / PostList). Mark with "use client". Use fetch to call the API. (You already have working PostForm in src/components.)
+10.  Add global CSS and import it from src/app/layout.tsx:
+
+import '../styles/globals.css';
+export default function RootLayout({ children }: any) { ... }
+
+11. Ensure tsconfig path alias (optional) — to use '@/...' imports
+
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": { "@/*": ["src/*"] },
+    ...
+  }
+}
+
+12. {}package.json scripts (should already exist from create-next-app)
+
+"scripts": {
+  "dev": "next dev",
+  "build": "next build",
+  "start": "next start"
+}
+
+13. Run dev 
+
+# regenerate (if you changed schema)
+npx prisma generate
+
+# start dev
+npm run dev
+
+# open http://localhost:3000
